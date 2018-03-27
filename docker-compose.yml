@@ -1,0 +1,11 @@
+version: '3.4'
+services:
+  webex:
+    build: .
+    container_name: firefox-webex
+    environment:
+      DISPLAY: 
+    volumes:
+      - '$HOME/.Xauthority:/home/webex/.Xauthority:rw'
+      - '/dev/snd:/dev/snd'
+    network_mode: 'host'
